@@ -1,15 +1,87 @@
-@import "tailwindcss";
-
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+body {
+  margin: 0;
+  padding: 0;
+  background: #1a192e;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+.rick-morty-container {
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: #1a192e;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+.title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 300;
+  color: #97ce4c;
+  margin: 0 0 60px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.character-card {
+  background: #15203f;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+}
+
+.character-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.character-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character-info {
+  padding: 20px;
+  background: #15203f;
+}
+
+.character-info h3 {
+  color: #f5f5f5;
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  font-weight: 300;
+}
+
+.species {
+  color: #82888a;
+  font-size: 16px;
+  margin: 0 0 15px 0;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status.alive {
+  background: #02ff89;
+  color: #00260c;
 }
