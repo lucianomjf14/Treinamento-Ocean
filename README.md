@@ -1,88 +1,104 @@
-# Welcome to React Router!
+# Rick and Morty - Character Cards
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Aplicacao React com cartoes de personagens da serie Rick and Morty, desenvolvida durante o curso **Frontend Web com ReactJS** do programa [Samsung Ocean](https://oceanbrasil.com/).
 
 ---
 
-Built with ❤️ using React Router.
-#teste
+## Sobre o Projeto
+
+Interface visual com cartoes estilizados exibindo personagens da serie Rick and Morty, utilizando imagens da [Rick and Morty API](https://rickandmortyapi.com/). O projeto foi construido com React Router, TypeScript e TailwindCSS como parte do treinamento Samsung Ocean.
+
+---
+
+## Funcionalidades
+
+- Exibicao de cartoes de personagens (Rick, Morty, Summer)
+- Indicador visual de status (Alive/Dead)
+- Efeitos de hover com animacao
+- Tema escuro com paleta de cores da serie
+- Configurado com Docker para deploy
+
+---
+
+## Tecnologias
+
+| Tecnologia | Uso |
+|------------|-----|
+| React | Biblioteca de interface |
+| TypeScript | Tipagem estatica |
+| React Router | Roteamento |
+| TailwindCSS | Estilizacao |
+| Vite | Bundler e dev server |
+| Docker | Containerizacao |
+
+---
+
+## Como Executar
+
+```bash
+# Clonar o repositorio
+git clone https://github.com/lucianomjf14/Treinamento-Ocean.git
+cd Treinamento-Ocean
+
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
+```
+
+A aplicacao estara disponivel em `http://localhost:5173`.
+
+### Com Docker
+
+```bash
+docker build -t rick-morty-app .
+docker run -p 3000:3000 rick-morty-app
+```
+
+---
+
+## Estrutura do Projeto
+
+```
+Treinamento-Ocean/
+|-- app/
+|   |-- routes/
+|   |-- welcome/
+|   |   |-- welcome.tsx    # Componente dos cartoes de personagens
+|   |-- app.css            # Estilos customizados (tema Rick and Morty)
+|   |-- root.tsx
+|   |-- routes.ts
+|-- public/
+|-- src/
+|-- Dockerfile
+|-- vite.config.ts
+|-- tsconfig.json
+|-- package.json
+|-- README.md
+|-- LICENSE
+```
+
+---
+
+## Certificacao
+
+Projeto desenvolvido durante o curso certificado pelo Samsung Ocean:
+
+- [Frontend Web com ReactJS: Introducao - Parte 1](https://oceanbrasil.com/certificado/cml1iwuy9000q13jkzlt4d3rb_6508)
+- [Frontend Web com ReactJS: Introducao - Parte 2](https://oceanbrasil.com/certificado/cml9wijsm000ztq3xjz3yigwe_6507)
+
+---
+
+## Licenca
+
+Este projeto esta licenciado sob a [Licenca MIT](LICENSE).
+
+---
+
+## Autor
+
+**Luciano Marinho Silveira**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/luciano-marinho-silveira)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/lucianomjf14)
